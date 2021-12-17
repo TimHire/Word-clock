@@ -1,0 +1,39 @@
+What the program needs to be able to do:
+      1. Able to get the time, either when uploaded to the Arduino or updates from an app connected to a phone by bluetooth of wifi
+              - Work out a way for the Arduino to automatically get the time and date from the computer when compiling and uploading the code to the Arduino
+      2. Refresh the time on the word clock every minute by turining on the corresponding lights
+      3. Needs to keep track of the dates to be able to turn on the Happyh Birthday lights and keep tracks of when the clocks go forwards and backwards
+      4. Make sure the clock can be reliably powered for long periods of time
+
+
+Pins being used:
+7 - LED strip pin
+10 - LED 1
+11 - LED 2
+12 - LED 3
+13 - LED 4
+
+
+What needs to be done to get the word clock ready:
+      1. Make sure the LEDs can be communicated to the by the Arduino, and that the library consistently works to control the LEDs
+      2. Finish getting the letters out of the from the front face
+      3. Spray paint the inside 3D printed grid white for better light diffusion, and glue the diffusing places into the correct places --> need to make sure light cannot escape as a result of the print warping
+      4. Spray paint the wood matt black for improvd visuals
+      5. Add holes for cables to be able to get into the back of the word clock
+      6. Add the minute LEDs and their resistors to the circuit
+      7. Design a custom PCB with some ability to change the time remotely ==> need to design and interfacing app to be able to connect to it
+
+
+Things still to add 15/7/21:
+      	1. Create an app that allows communication via bluetooth --> potentially can just use the bluetooth terminal on the phone to communicate commands to the serial line
+	2. Need to create a night mode --> turn down the lights from 10 to 7 --> allow for the app/terminal to completely turn off the lights when required, but need to turn back on at 6
+	3. Make sure there are no shorts in the electronics
+	4. Glue down the electronics in the case --> may need to widen some of the gaps
+
+	
+//Need to make sure there is a common ground between the LED 5V power supply and the Arduino
+//Could consider adding a 1000uF capacitor over the 5V power input connection to smooth the signal
+
+//Need to investigate how to make setting the time easier --> potentially just set for a time in the future and then connect the power
+    // Potentially considering adding a bluetooth or wifi module to allow for remotely changing the time --> may need to make an app that can communicate with the phone
+//Need to make sure the Arduino can be powered by the sanme 5V input as the Arduino
